@@ -149,9 +149,6 @@ If you prefer to work step-by-step without orchestration:
    - `@gem-tester` – E2E and unit testing
 
 3. **Prerequisites for local development**
-   - .NET 10 SDK
-   - Node.js 20+
-   - Azure CLI
    - Git
    - GitHub Copilot subscription
 

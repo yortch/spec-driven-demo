@@ -110,13 +110,6 @@ See [copilot-instructions.md](.github/copilot-instructions.md) for FSI standards
 - Event-driven microservices
 - Support for seasonal submission spikes
 
-## Tech Stack
-
-- **Cloud:** Microsoft Azure (single tenant, multi-region active/active for Tier-1)
-- **Services:** C# (.NET 10), TypeScript, Azure Service Bus, Azure API Management, Azure Monitor
-- **Infrastructure:** Bicep
-- **Architecture:** Event-driven microservices with bounded contexts
-
 ## Getting Started
 
 ### Quick Start with GEM Orchestrator

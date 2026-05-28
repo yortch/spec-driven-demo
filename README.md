@@ -58,11 +58,13 @@ gh copilot plugin install github/awesome-copilot
 Once the plugin is installed:
 
 1. Open the **Copilot Chat** panel (Ctrl+Shift+I / Cmd+Shift+I)
-2. In the chat input, use the **gem-orchestrator** agent:
+2. Click the **Agent** dropdown (or icon) at the top of the chat input
+3. Select **gem-orchestrator** from the list
+4. In the chat input, paste or type the prompt:
    ```
-   @gem-orchestrator build this #file:prd.md
+   build this #file:prd.md
    ```
-3. The orchestrator will:
+5. Press Enter. The orchestrator will:
    - Analyze the PRD using `gem-researcher`
    - Generate architecture with `gem-designer` and `architect` agents
    - Create implementation plan with `gem-planner`
@@ -131,10 +133,10 @@ See [copilot-instructions.md](.github/copilot-instructions.md) for FSI standards
    ```
 
 3. **Launch the orchestrated workflow in Copilot Chat**
-   ```
-   @gem-orchestrator build this #file:prd.md
-   ```
-   This triggers the full spec-driven pipeline with coordinated agents.
+   - Open Copilot Chat (Ctrl+Shift+I / Cmd+Shift+I)
+   - Select **gem-orchestrator** from the agent dropdown
+   - Type: `build this #file:prd.md`
+   - Press Enter to trigger the full spec-driven pipeline with coordinated agents
 
 ### Manual Setup (without plugin)
 

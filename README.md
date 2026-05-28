@@ -26,17 +26,6 @@ This project showcases a secure, conversion-focused web platform where:
 
 ```
 ├── prd.md                          # Product Requirements Document
-├── docs/
-│   ├── PRD.yaml                    # Structured PRD metadata
-│   └── plan/
-│       └── plan-20260527-001/      # Active planning cycle
-│           ├── plan.yaml           # Master plan
-│           ├── plan-a.yaml         # Component A (e.g., Frontend)
-│           ├── plan-b.yaml         # Component B (e.g., API)
-│           ├── plan-c.yaml         # Component C (e.g., Infrastructure)
-│           ├── research_findings_*.yaml  # Research outputs
-│           ├── research-*.md       # Detailed research docs
-│           └── logs/               # Execution logs
 └── README.md                       # This file
 ```
 
@@ -44,7 +33,7 @@ This project showcases a secure, conversion-focused web platform where:
 
 This project follows **spec-driven development**:
 
-1. **Specs First** – Product requirements and architectural decisions documented before code
+1. **Specs First** – Product requirements documented before code
 2. **Planning** – Multi-component decomposition, wave scheduling, risk analysis
 3. **Research** – Architecture baseline, security/compliance controls, implementation strategy
 4. **Implementation** – Code generation, testing, deployment automation
@@ -101,11 +90,8 @@ See [copilot-instructions.md](.github/copilot-instructions.md) for FSI standards
 git clone https://github.com/yortch/spec-driven-demo.git
 cd spec-driven-demo
 
-# Review the PRD and planning docs
+# Review the PRD
 cat prd.md
-ls -la docs/plan/plan-20260527-001/
-
-# Follow setup instructions in component plans (plan-a.yaml, plan-b.yaml, etc.)
 ```
 
 ## Success Metrics
@@ -129,10 +115,6 @@ ls -la docs/plan/plan-20260527-001/
 - All significant decisions must be captured as ADRs in `/docs/adr/`
 - Security-sensitive code requires AppSec review
 - See [copilot-instructions.md](.github/copilot-instructions.md) for FSI compliance guardrails
-
-## Contact
-
-For questions on architecture, security, or compliance requirements, refer to the planning docs in `docs/plan/` or reach out to the architecture team.
 
 ---
 

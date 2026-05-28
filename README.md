@@ -1,14 +1,21 @@
 # spec-driven-demo
 
-A spec-driven development example for a **Commercial Property Insurance Website Application** — demonstrating how to structure planning, architecture, security, and implementation workflows for FSI (Financial Services Industry) regulated workloads on Microsoft Azure.
+**A spec-driven development demo using the [GEM Team Plugin](https://github.com/github/awesome-copilot)** for a **Commercial Property Insurance Website Application**. This repository demonstrates end-to-end multi-agent orchestration for spec → design → implementation workflows in FSI (Financial Services Industry) regulated workloads on Microsoft Azure.
 
 ## Overview
 
-This project showcases a secure, conversion-focused web platform where:
-- **Small/medium business owners** can get quotes and submit applications for commercial property coverage
-- **Insurance brokers/agents** can manage multi-client submissions and delegated access
-- **Underwriters** can review, triage, and move submissions through approval workflows
-- **Policyholders** can track status, upload documents, and manage policy lifecycle
+**This repository is a working demo** of spec-driven development using the **GEM Team Plugin for GitHub Copilot**. It uses a real Commercial Property Insurance product specification to showcase:
+
+- **Single-prompt orchestration** – One user prompt triggers coordinated multi-agent workflow
+- **Spec as source of truth** – All design and code decisions flow from `prd.md`
+- **FSI compliance patterns** – Security, audit, and data governance for regulated workloads
+- **Modular agent workflows** – Separation of concerns: research, architecture, planning, implementation, testing, review
+
+The application enables:
+- **Small/medium business owners** to get quotes and submit applications for commercial property coverage
+- **Insurance brokers/agents** to manage multi-client submissions and delegated access
+- **Underwriters** to review, triage, and move submissions through approval workflows
+- **Policyholders** to track status, upload documents, and manage policy lifecycle
 
 ## Key Features (MVP)
 
@@ -29,14 +36,47 @@ This project showcases a secure, conversion-focused web platform where:
 └── README.md                       # This file
 ```
 
+## GEM Team Plugin Setup
+
+### Install the Plugin
+
+The GEM Team Plugin provides multi-agent orchestration for spec-driven workflows. To install:
+
+1. Open VS Code
+2. Go to **Extensions** (Ctrl+Shift+X / Cmd+Shift+X)
+3. Search for **"awesome-copilot"** or **"GEM Team"**
+4. Click **Install** on the official GitHub awesome-copilot extension
+5. Reload VS Code when prompted
+
+Alternatively, install via GitHub CLI:
+```bash
+gh copilot plugin install github/awesome-copilot
+```
+
+### Kick Off the Spec-Driven Flow
+
+Once the plugin is installed:
+
+1. Open the **Copilot Chat** panel (Ctrl+Shift+I / Cmd+Shift+I)
+2. In the chat input, use the **gem-orchestrator** agent:
+   ```
+   @gem-orchestrator build this #file:prd.md
+   ```
+3. The orchestrator will:
+   - Analyze the PRD using `gem-researcher`
+   - Generate architecture with `gem-designer` and `architect` agents
+   - Create implementation plan with `gem-planner`
+   - Generate code via specialized implementer agents
+   - Validate results with reviewer and tester agents
+
 ## Development Approach
 
-This project follows **spec-driven development**:
+This project follows **spec-driven development** with multi-agent coordination:
 
-1. **Specs First** – Product requirements documented before code
-2. **Planning** – Multi-component decomposition, wave scheduling, risk analysis
-3. **Research** – Architecture baseline, security/compliance controls, implementation strategy
-4. **Implementation** – Code generation, testing, deployment automation
+1. **Specs First** – PRD serves as single source of truth (see `#file:prd.md`)
+2. **Research & Design** – Multi-agent analysis of requirements, architecture, security
+3. **Planning** – DAG-based execution plan with component decomposition and wave scheduling
+4. **Implementation** – Specialized agents handle frontend, backend, infra, tests
 5. **Validation** – Security review, compliance verification, performance benchmarks
 
 See [copilot-instructions.md](.github/copilot-instructions.md) for FSI standards and guardrails.
@@ -77,22 +117,48 @@ See [copilot-instructions.md](.github/copilot-instructions.md) for FSI standards
 
 ## Getting Started
 
-### Prerequisites
-- .NET 10 SDK
-- Node.js 20+
-- Azure CLI
-- Git
+### Quick Start with GEM Orchestrator
 
-### Local Development
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yortch/spec-driven-demo.git
+   cd spec-driven-demo
+   ```
 
-```bash
-# Clone the repository
-git clone https://github.com/yortch/spec-driven-demo.git
-cd spec-driven-demo
+2. **Open in VS Code with GEM Team Plugin installed**
+   ```bash
+   code .
+   ```
 
-# Review the PRD
-cat prd.md
-```
+3. **Launch the orchestrated workflow in Copilot Chat**
+   ```
+   @gem-orchestrator build this #file:prd.md
+   ```
+   This triggers the full spec-driven pipeline with coordinated agents.
+
+### Manual Setup (without plugin)
+
+If you prefer to work step-by-step without orchestration:
+
+1. **Review the PRD**
+   ```bash
+   cat prd.md
+   ```
+
+2. **Use individual agents for each phase**
+   - `@gem-researcher` – Explore and analyze requirements
+   - `@architect` – Design architecture and create ADRs
+   - `@gem-planner` – Create execution plan
+   - `@gem-implementer` – Implement features via TDD
+   - `@gem-reviewer` – Security audit and compliance check
+   - `@gem-tester` – E2E and unit testing
+
+3. **Prerequisites for local development**
+   - .NET 10 SDK
+   - Node.js 20+
+   - Azure CLI
+   - Git
+   - GitHub Copilot subscription
 
 ## Success Metrics
 

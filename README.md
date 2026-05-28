@@ -1,6 +1,6 @@
 # spec-driven-demo
 
-**A spec-driven development demo using the [GEM Team Plugin](https://github.com/github/awesome-copilot)** for a **Commercial Property Insurance Website Application**. This repository demonstrates end-to-end multi-agent orchestration for spec → design → implementation workflows in FSI (Financial Services Industry) regulated workloads on Microsoft Azure.
+**A spec-driven development demo using the [GEM Team Plugin](https://github.com/github/awesome-copilot/blob/main/plugins/gem-team/README.md)** for a **Commercial Property Insurance Website Application**. This repository demonstrates end-to-end multi-agent orchestration for spec → design → implementation workflows in FSI (Financial Services Industry) regulated workloads on Microsoft Azure.
 
 ## Overview
 
